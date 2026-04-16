@@ -62,15 +62,29 @@ a {
     height: 260px;
 }
 
-.grid {
-    border: 1px solid #1D4ED8;
-    width: 304px;
-    height: 237px;
-    margin-top: 58px;
-    
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+    margin: 58px 167px 20px 167px;
 }
 
-.caixa {
-    display: flex;
-    justify-content: center;
+.box-a, .box-b, .box-c {
+    display: grid;
+    padding: 17px 35px 45px 35px;
+    gap: 15px;
+    border: 1px solid #DFDFDF;
+    border-radius: 10px;
 }
+
+.passos {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
+
+
+
