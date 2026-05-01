@@ -56,48 +56,23 @@ a {
     color: rgba(4, 4, 4, 0.85);
 }
 
-.container {
-    background-color: #1D4ED8;
-    
-    height: 260px;
-}
-
 .box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 80px;
-    margin: 58px 167px 20px 167px;
-}
-
-.box-a, .box-b, .box-c {
-    display: grid;
-    padding: 17px 35px 45px 35px;
-    gap: 15px;
-    border: 1px solid #DFDFDF;
-    border-radius: 10px;
-}
-
-.passos {
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    margin-top: 100px;
-}
-
-.unidades {
-    margin: 61px 220px;
-}
-
-.clinica {
-    display: flex;
-    flex-direction: column;
-}
-
-.borderclinica {
-    display: flex;
+    height: 500px;
+    margin: 62px 305px 465px 305px;
     border: 1px solid #C2C2C2;
-    border-radius: 10px;
-    gap: 20px;
 
 }
 
+input {
+ 
+    width: 350px;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #B1B1B1;
+} 
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
