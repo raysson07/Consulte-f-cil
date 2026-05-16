@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #143593;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1000px;
+    list-style: none;
+    margin-right: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+
+li {
+    color: rgba(4, 4, 4, 0.85);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.logo {
+    display: flex;
+
+
+}
+
+
