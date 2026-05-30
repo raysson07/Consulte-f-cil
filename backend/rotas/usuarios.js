@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const conexao = require('backend/js/db');
+const conexao = require('../db');
 
 router.post('/cadastrar', (req, res) => {
   const { nome, email, senha, telefone, data_nascimento } = req.body;
