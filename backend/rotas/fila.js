@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const conexao = require('../db');
+const autenticar = require('../middleware/auth');
 
-router.get('/', (req, res) => {
+router.get('/', autenticar, (req, res) => {
   conexao.query(
     `SELECT f.posicao, u.nome, a.tipo, a.status, a.data_hora
      FROM fila f
@@ -17,7 +18,7 @@ router.get('/', (req, res) => {
   );
 });
 
-router.put('/atualizar/:agendamento_id', (req, res) => {
+router.put('/atualizar/:agendamento_id', autenticar, (req, res) => {
   const { agendamento_id } = req.params;
   const { status } = req.body;
 

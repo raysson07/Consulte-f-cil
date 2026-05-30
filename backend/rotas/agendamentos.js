@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const conexao = require('../db');
+const autenticar = require('../middleware/auth');
 
-router.post('/criar', (req, res) => {
+router.post('/criar', autenticar, (req, res) => {
   const { usuario_id, medico_id, tipo, data_hora } = req.body;
 
   conexao.query(
@@ -25,7 +26,7 @@ router.post('/criar', (req, res) => {
   );
 });
 
-router.get('/meus/:usuario_id', (req, res) => {
+router.get('/meus/:usuario_id', autenticar, (req, res) => {
   const { usuario_id } = req.params;
 
   conexao.query(

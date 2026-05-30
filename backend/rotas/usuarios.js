@@ -1,30 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const conexao = require('../db');
+const autenticar = require('../middleware/auth');
 
-router.post('/cadastrar', (req, res) => {
-  const { nome, email, senha, telefone, data_nascimento } = req.body;
-
-  conexao.query(
-    'INSERT INTO usuarios (nome, email, senha, telefone, data_nascimento) VALUES (?, ?, ?, ?, ?)',
-    [nome, email, senha, telefone, data_nascimento],
-    (erro, resultado) => {
-      if (erro) return res.status(500).json({ erro: 'Erro ao cadastrar' });
-      res.json({ mensagem: 'Usuário cadastrado com sucesso!', id: resultado.insertId });
-    }
-  );
-});
-
-router.post('/login', (req, res) => {
-  const { email, senha } = req.body;
+router.get('/:id', autenticar, (req, res) => {
+  const { id } = req.params;
 
   conexao.query(
-    'SELECT * FROM usuarios WHERE email = ? AND senha = ?',
-    [email, senha],
+    'SELECT id, nome, email, telefone, data_nascimento FROM usuarios WHERE id = ?',
+    [id],
     (erro, resultado) => {
-      if (erro) return res.status(500).json({ erro: 'Erro ao fazer login' });
-      if (resultado.length === 0) return res.status(401).json({ erro: 'Email ou senha incorretos' });
-      res.json({ mensagem: 'Login realizado!', usuario: resultado[0] });
+      if (erro) return res.status(500).json({ erro: 'Erro ao buscar usuário' });
+      if (resultado.length === 0) return res.status(404).json({ erro: 'Usuário não encontrado' });
+      res.json(resultado[0]);
     }
   );
 });

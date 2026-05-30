@@ -1,35 +1,40 @@
 const form = document.getElementById("formCadastro");
 
 form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-   e.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+  const confirmar_senha = document.getElementById("confirmar_senha").value;
+  const telefone = document.getElementById("telefone").value;
+  const data_nascimento = document.getElementById("data_nascimento").value;
 
-   const email =
-      document.getElementById("email").value;
+  if (senha !== confirmar_senha) {
+    alert("As senhas não coincidem!");
+    return;
+  }
 
-   const senha =
-      document.getElementById("senha").value;
+  const resposta = await fetch("http://localhost:3000/auth/cadastro", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      nome,
+      email,
+      senha,
+      telefone,
+      data_nascimento
+    })
+  });
 
-   const resposta = await fetch(
-      "http://localhost:3000/auth/cadastro",
-      {
+  const dados = await resposta.json();
 
-         method: "POST",
-
-         headers: {
-            "Content-Type": "application/json"
-         },
-
-         body: JSON.stringify({
-            email,
-            senha
-         })
-
-      }
-   );
-
-   const dados = await resposta.json();
-
-   alert(dados.mensagem);
-
+  if (dados.mensagem) {
+    alert("Cadastro realizado com sucesso!");
+    window.location.href = "login.html";
+  } else {
+    alert(dados.erro);
+  }
 });
