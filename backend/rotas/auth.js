@@ -5,12 +5,12 @@ const jwt = require('jsonwebtoken');
 const conexao = require('../db');
 
 router.post('/cadastro', (req, res) => {
-  const { nome, email, senha } = req.body;
+  const { nome, email, senha, telefone, data_nascimento, cpf } = req.body;
 
   if (!nome || !email || !senha)
     return res.status(400).json({ erro: 'Preencha todos os campos' });
 
-  conexao.query('SELECT * FROM usuarios WHERE email = ?', [email], (erro, resultado) => {
+  conexao.query('SELECT * FROM usuario WHERE email = ?', [email], (erro, resultado) => {
     if (erro) return res.status(500).json({ erro: 'Erro no servidor' });
     if (resultado.length > 0)
       return res.status(400).json({ erro: 'Email já cadastrado' });
@@ -19,8 +19,8 @@ router.post('/cadastro', (req, res) => {
       if (erro) return res.status(500).json({ erro: 'Erro ao criptografar senha' });
 
       conexao.query(
-        'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)',
-        [nome, email, hash],
+        'INSERT INTO usuario (nome, email, senha, telefone, data_nascimento, cpf) VALUES (?, ?, ?, ?, ?, ?)',
+        [nome, email, hash, telefone, data_nascimento, cpf],
         (erro) => {
           if (erro) return res.status(500).json({ erro: 'Erro ao cadastrar' });
           res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso!' });
@@ -36,7 +36,7 @@ router.post('/login', (req, res) => {
   if (!email || !senha)
     return res.status(400).json({ erro: 'Preencha todos os campos' });
 
-  conexao.query('SELECT * FROM usuarios WHERE email = ?', [email], (erro, resultado) => {
+  conexao.query('SELECT * FROM usuario WHERE email = ?', [email], (erro, resultado) => {
     if (erro) return res.status(500).json({ erro: 'Erro no servidor' });
     if (resultado.length === 0)
       return res.status(401).json({ erro: 'Email ou senha inválidos' });

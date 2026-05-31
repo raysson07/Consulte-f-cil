@@ -9,6 +9,7 @@ form.addEventListener("submit", async (e) => {
   const confirmar_senha = document.getElementById("confirmar_senha").value;
   const telefone = document.getElementById("telefone").value;
   const data_nascimento = document.getElementById("data_nascimento").value;
+  const cpf = document.getElementById("cpf").value;
 
   if (senha !== confirmar_senha) {
     alert("As senhas não coincidem!");
@@ -25,7 +26,8 @@ form.addEventListener("submit", async (e) => {
       email,
       senha,
       telefone,
-      data_nascimento
+      data_nascimento,
+      cpf
     })
   });
 

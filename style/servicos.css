@@ -7,6 +7,7 @@
 body {
     min-height: 100vh;
     font-family: "Inter", sans-serif;
+    background-color: #f0f4f8;
 }
 
 .layout {
@@ -128,11 +129,11 @@ nav {
 
 .cards-container {
     display: flex;
-    gap: 16px; 
-    
+    gap: 16px;
+    margin-top: 30px;
 }
 
-.card1, .card2, .card3 {
+.card1, .card2 {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 24px;
@@ -140,96 +141,58 @@ nav {
     height: 150px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     flex-direction: column;
-    transition:0.2s ease, 0.2s ease;
-     
+    transition: 0.2s ease, 0.2s ease;
 }
 
-.card1:hover, .card2:hover, .card3:hover {
+.card1:hover, .card2:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .dashboard {
     margin: 25px 0 25px 60px;
-
 }
 
-.svg1 {
-    color: #1D4ED8;
-    margin-bottom: 15px;
-    
+.lista {
+    background-color: white;
+    width: 1230px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 25px;
 }
 
-.svg2 {
-    color: #6f42c1;
-    margin-bottom: 15px;
+h3 {
+    padding: 20px 20px 0 25px;
 }
 
-.svg3 {
-    color: #ffc107;
-    margin-bottom: 15px;
-}
-
-.numero {
-    font-size: 28px;
-    font-weight: 600;
-    color: #0f172a;
-}
-
-.detalhes p {
-    font-size: 14px;
-    color: #64748b;
-    margin-top: 2px;
-}
-
-.proximoagendamento {
-    margin-top: 30px;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-
-.agendamento {
+.item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    padding: 0 20px;
 }
 
-.agendamento span {
-    font-size: 16px;
-    font-weight: 500;
-    color: #0f172a;
+.info {
+    display: flex;
+    margin: 20px 20px 0 5px;
+    flex-direction: column;
 }
 
-.agendamento input {
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 13px;
-    outline: none;
-    width: 220px;
-    transition: border 0.2s;
-}
-
-.agendamento input:focus {
-    border-color: #1D4ED8;
-}
-
-.top2 {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1.5fr 1.2fr;
-    padding: 10px 12px;
-    background-color: #f8fafc;
-    border-radius: 8px;
+.nome {
+    font-weight: 600;
+    font-size: 15px;
     margin-bottom: 4px;
 }
 
-.top2 span {
-    font-size: 11px;
-    font-weight: 600;
-    color: #94a3b8;
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    color: #6B7280;
+    margin-bottom: 2px;
 }
 
-
+.ver-mais {
+    color: #1D4ED8;
+    margin: 0 0 0 25px;
+}
