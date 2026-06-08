@@ -4,11 +4,12 @@ const conexao = require('../db');
 const autenticar = require('../middleware/auth');
 
 router.post('/criar', autenticar, (req, res) => {
-  const { usuario_id, medico_id, tipo, data_hora } = req.body;
+  const { nome, data_nascimento, especialidade, data_consulta, horario, local, motivo } = req.body;
+  const usuario_id = req.usuario.id;
 
   conexao.query(
-    'INSERT INTO agendamentos (usuario_id, medico_id, tipo, data_hora, status) VALUES (?, ?, ?, ?, "aguardando")',
-    [usuario_id, medico_id, tipo, data_hora],
+    'INSERT INTO agendamentos (usuario_id, nome, data_nascimento, especialidade, data_consulta, horario, local, motivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+    [usuario_id, nome, data_nascimento, especialidade, data_consulta, horario, local, motivo],
     (erro, resultado) => {
       if (erro) return res.status(500).json({ erro: 'Erro ao criar agendamento' });
 
@@ -19,22 +20,18 @@ router.post('/criar', autenticar, (req, res) => {
         [agendamento_id],
         (erro2) => {
           if (erro2) return res.status(500).json({ erro: 'Erro ao entrar na fila' });
-          res.json({ mensagem: 'Agendamento criado e adicionado à fila!', id: agendamento_id });
+          res.json({ mensagem: 'Agendamento criado com sucesso!', id: agendamento_id });
         }
       );
     }
   );
 });
 
-router.get('/meus/:usuario_id', autenticar, (req, res) => {
-  const { usuario_id } = req.params;
+router.get('/meus', autenticar, (req, res) => {
+  const usuario_id = req.usuario.id;
 
   conexao.query(
-    `SELECT a.id, a.tipo, a.data_hora, a.status, m.nome AS medico, m.especialidade
-     FROM agendamentos a
-     JOIN medicos m ON a.medico_id = m.id
-     WHERE a.usuario_id = ?
-     ORDER BY a.data_hora`,
+    'SELECT * FROM agendamentos WHERE usuario_id = ? ORDER BY data_consulta',
     [usuario_id],
     (erro, resultado) => {
       if (erro) return res.status(500).json({ erro: 'Erro ao buscar agendamentos' });

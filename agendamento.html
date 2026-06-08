@@ -21,94 +21,76 @@
             <h2>Agendamento online</h2>
         </div>
 
-        <form>
+        <form id="formAgendamento">
             <div class="nome">
-                <label for="text">
+                <label for="nome">
                     Nome completo
                 </label>
-                <input type="text" placeholder="Nome completo">
+                <input type="text" id="nome" placeholder="Nome completo">
             </div>
 
             <div class="data-nascimento">
-                <label for="date">
+                <label for="data_nascimento">
                     Data de nascimento
                 </label>
-                <input type="date">
+                <input type="date" id="data_nascimento">
             </div>
 
             <div class="area-medica">
-                <label">
+                <label for="especialidade">
                     Área médica
-                    </label>
-
-                    <select>
-                        <option>
-                            Especialidade
-                        </option>
-
-                        <option>Cardiologia</option>
-                        <option>Dermatologia</option>
-                        <option>Neurologia</option>
-                    </select>
+                </label>
+                <select id="especialidade">
+                    <option>Especialidade</option>
+                    <option>Cardiologia</option>
+                    <option>Dermatologia</option>
+                    <option>Neurologia</option>
+                </select>
             </div>
 
             <div class="data">
-                <label for="date">
+                <label for="data_consulta">
                     Data
                 </label>
-
-                <select>
-                    <option>
-                        Data consulta
-                    </option>
+                <select id="data_consulta">
+                    <option>Data consulta</option>
                 </select>
             </div>
-
 
             <div class="horario">
-                <label>
+                <label for="horario">
                     Horário
                 </label>
-
-                <select>
-                    <option>
-                        Horário
-                    </option>
+                <select id="horario">
+                    <option>Horário</option>
                 </select>
             </div>
-
 
             <div class="local">
-                <label>
+                <label for="local">
                     Local
                 </label>
-
-                <select>
-                    <option>
-                        Selecione o local
-                    </option>
+                <select id="local">
+                    <option>Selecione o local</option>
                 </select>
             </div>
 
-
             <div class="motivo">
-                <label for="text">
+                <label for="motivo">
                     Motivo da consulta
                 </label>
-
-                <textarea placeholder="Ex: Dor de cabeça"></textarea>
+                <textarea id="motivo" placeholder="Ex: Dor de cabeça"></textarea>
             </div>
-
 
             <div>
                 <button type="submit" class="btn btn-primary btn-agendar">
-
                     Confirmar Agendamento
                 </button>
             </div>
-
         </form>
     </div>
+
+    <script src="js/agendamento.js"></script>
 </body>
 
 </html>
