@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: #f0f4f8;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+nav {
+    width: 240px;
+    height: 115vh;
+    background-color: #1D4ED8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+#sidebar {
+    padding: 8px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+#logo_consultefacil {
+    width: 53px;
+    height: 42px;
+}
+
+#logo_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo_infos span:first-child {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+#logo_infos span:last-child {
+    font-size: 13px;
+    color: white;
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+#side_items :hover {
+    background-color: #2757db;
+    color: white;
+    border-radius: 10px;
+}
+
+.side-item a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.658);
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+}
+
+.item-description {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#sair {
+    border-top: 1px solid #d9dff0;
+    padding: 14px;
+}
+
+#sair_btn {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    background-color: #143593;
+    display: flex;
+    height: 75px;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.top span:first-child {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.top span:last-child {
+    font-size: 13px;
+    color: white;
+}
+
+.cards-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.card1, .card2 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    flex-direction: column;
+    transition: 0.2s ease, 0.2s ease;
+}
+
+.card1:hover, .card2:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard {
+    margin: 25px 0 25px 60px;
+}
+
+.lista {
+    background-color: white;
+    width: 1230px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+h3 {
+    padding: 20px 20px 0 25px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.info {
+    display: flex;
+    margin: 20px 20px 0 5px;
+    flex-direction: column;
+}
+
+.nome {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    color: #6B7280;
+    margin-bottom: 2px;
+}
+
+.ver-mais {
+    color: #1D4ED8;
+    margin: 0 0 0 25px;
+}

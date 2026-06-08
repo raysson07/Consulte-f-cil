@@ -4,33 +4,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Paciente</title>
-    <link rel="stylesheet" href="style/paciente.css">
+    <title>Portal do Paciente</title>
+
+    <link rel="stylesheet" href="./style/paciente.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <section>
-        <header>
-            <nav>
-                <div class="container">
-                    <ul>
-                        <li class="logo">
-                            <img src="./assets/logoimg 3 (3).png" alt="" class="logo">
+    <div class="layout">
+        <nav>
 
-                            <h1>Consulte Fácil</h1>
-                        </li>
-                    </ul>
+            <div id="sidebar">
+
+
+                <div id="logo">
+                    <img src="./assets/logoimg 3.png" id="logo_consultefacil">
+
+                    <div id="logo_infos">
+                        <span>Consulte Fácil</span>
+                        <span>Portal do Paciente</span>
+                    </div>
                 </div>
-                <ul>
-                    <li class="portal">Portal Paciente</li>
-                    <li><img src="assets/exit 1.png" alt=""></li>
+
+
+                <ul id="side_items">
+
+                    <li class="side-item">
+                        <a href="#">
+                            <span class="item-description">
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <span class="item-description">
+                                Agendar Consultas
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <span class="item-description">
+                                Agendar exames
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <span class="item-description">
+                                Resultados
+                            </span>
+                        </a>
+                    </li>
+
                 </ul>
-            </nav>
 
-        </header>
-    </section>
+            </div>
 
-<script src="js/auth.js"></script>
+
+            <div id="sair">
+                <button id="sair_btn">
+                    <span>
+                        Sair
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="main">
+            <div class="top">
+                <span>Portal do Paciente</span>
+                <span>Bem-Vindo</span>
+            </div>
+
+            <section class="dashboard">
+                <div class="cards-container">
+                    <div class="card1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="svg1"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z" />
+                            <path
+                                d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128z" />
+                        </svg>
+                        <div class="detalhes">
+                            <h1 class="numero">2</h1>
+                            <p>Consultas agendadas</p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="svg2"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857q.09.083.176.171a3 3 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01zM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5" />
+                            <path
+                                d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162z" />
+                        </svg>
+
+                        <div class="detalhes">
+                            <h1 class="numero">2</h1>
+
+                            <p>Exames agendados</p>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="svg3"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2 1.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1-.5-.5m2.5.5v1a3.5 3.5 0 0 0 1.989 3.158c.533.256 1.011.791 1.011 1.491v.702c0 .7-.478 1.235-1.011 1.491A3.5 3.5 0 0 0 4.5 13v1h7v-1a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351v-.702c0-.7.478-1.235 1.011-1.491A3.5 3.5 0 0 0 11.5 3V2z" />
+                        </svg>
+
+                        <div class="detalhes">
+                            <h1 class="numero">2</h1>
+                            <p>Pendente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proximaconsulta">
+
+                    <div class="info">
+
+                        <button>Próxima Consulta</button>
+                        <div class="clinica">
+                            <h1>
+                                Clínica médica - Patos de Minas
+                            </h1>
+
+                            <p>
+                                Consulta
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="loc">
+                        <div class="local">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="time" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                            </svg>
+
+                            <span>10/06/2025 · 09:00</span>
+                        </div>
+
+                        <div class="local">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="map" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+
+                            <span>Clínica médica - Patos de Minas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="historico">
+                    <div class="consultas-card">
+                        <div class="consultas-header">
+                            <span class="consultas-titulo">Minhas Consultas</span>
+                            <a href="#" class="consultas-ver-todas">Ver todas</a>
+                        </div>
+
+                        <div class="consulta-item">
+                            <div class="consulta-infos">
+                                <span class="consulta-nome">Dr. Carlos Mendes</span>
+                                <span class="consulta-especialidade">Clínica Geral</span>
+                                <span class="consulta-data">10/06/2025 · 09:00</span>
+                            </div>
+                            <span class="badge confirmado">Confirmado</span>
+                        </div>
+
+
+                        <div class="consulta-item">
+                            <div class="consulta-infos">
+                                <span class="consulta-nome">Dr. Ricardo Lima</span>
+                                <span class="consulta-especialidade">Ortopedia</span>
+                                <span class="consulta-data">02/07/2025 · 11:00</span>
+                            </div>
+                            <span class="badge pendente">Pendente</span>
+                        </div>
+                    </div>
+
+
+                    <div class="consultas-card">
+                        <div class="consultas-header">
+                            <span class="consultas-titulo">Meus Exames</span>
+                            <a href="#" class="consultas-ver-todas">Ver todas</a>
+                        </div>
+
+                        <div class="consulta-item">
+                            <div class="consulta-infos">
+                                <span class="consulta-nome">Dr. Carlos Mendes</span>
+                                <span class="consulta-especialidade">Clínica Geral</span>
+                                <span class="consulta-data">10/06/2025 · 09:00</span>
+                            </div>
+                            <span class="badge confirmado">Confirmado</span>
+                        </div>
+
+                        <div class="consulta-item">
+                            <div class="consulta-infos">
+                                <span class="consulta-nome">Dr. Ricardo Lima</span>
+                                <span class="consulta-especialidade">Ortopedia</span>
+                                <span class="consulta-data">02/07/2025 · 11:00</span>
+                            </div>
+                            <span class="badge pendente">Pendente</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        </section>
+
+
+    </div>
+
+
+
+
+
+
+    </div>
 </body>
 
 </html>

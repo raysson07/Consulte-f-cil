@@ -7,7 +7,6 @@
 body {
     min-height: 100vh;
     font-family: "Inter", sans-serif;
-    background-color: #f0f4f8;
 }
 
 .layout {
@@ -19,7 +18,7 @@ body {
 nav {
     width: 240px;
     height: 115vh;
-    background-color: #ffffff;
+    background-color: #1D4ED8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,7 +38,7 @@ nav {
 }
 
 #logo_consultefacil {
-    width: 42px;
+    width: 53px;
     height: 42px;
 }
 
@@ -51,12 +50,12 @@ nav {
 #logo_infos span:first-child {
     font-size: 18px;
     font-weight: 500;
-    color: #000;
+    color: white;
 }
 
 #logo_infos span:last-child {
     font-size: 13px;
-    color: #8b8b8b;
+    color: white;
 }
 
 #side_items {
@@ -68,14 +67,14 @@ nav {
 }
 
 #side_items :hover {
-    background-color: #1D4ED8;
+    background-color: #2757db;
     color: white;
     border-radius: 10px;
 }
 
 .side-item a {
     text-decoration: none;
-    color: #000;
+    color: rgba(255, 255, 255, 0.658);
     display: flex;
     align-items: center;
     padding: 14px 18px;
@@ -106,7 +105,7 @@ nav {
 }
 
 .top {
-    background-color: #ffffff;
+    background-color: #143593;
     display: flex;
     height: 75px;
     flex-shrink: 0;
@@ -119,12 +118,12 @@ nav {
 .top span:first-child {
     font-size: 18px;
     font-weight: 500;
-    color: #000;
+    color: white;
 }
 
 .top span:last-child {
     font-size: 13px;
-    color: #8b8b8b;
+    color: white;
 }
 
 .cards-container {
@@ -156,13 +155,13 @@ nav {
 }
 
 .svg1 {
-    color: #dc3545;
+    color: #1D4ED8;
     margin-bottom: 15px;
     
 }
 
 .svg2 {
-    color: #198754;
+    color: #6f42c1;
     margin-bottom: 15px;
 }
 
@@ -171,133 +170,66 @@ nav {
     margin-bottom: 15px;
 }
 
-.detalhes {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.numero {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0f172a;
 }
 
-.proximaconsulta {
-    border-radius: 12px;
-    width: 1235px;
-    height: 190px;
-    margin-top: 35px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-.loc {
-    display: flex;
-    gap: 50px;
-}
-
-button {
-    margin: 25px 0 20px 25px;
-    width: 130px;
-    height: 25px;
-    background-color: #1D4ED8;
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
+.detalhes p {
     font-size: 14px;
-    cursor: pointer;
+    color: #64748b;
+    margin-top: 2px;
 }
 
-.clinica {
-    margin: 0px 0 5px 25px;
-}
-
-.loc {
-    margin: 15px 0 5px 25px;
-}
-
-.local {
-    display: flex;
-    gap: 10px;
-
-}
-
-
-.consultas-card {
-    background-color: #ffffff;
+.proximoagendamento {
+    margin-top: 30px;
+    background-color: #fff;
     border-radius: 12px;
     padding: 24px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 600px;
-    margin-top: 30px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-.consultas-header {
+.agendamento {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.consultas-titulo {
+.agendamento span {
     font-size: 16px;
-    font-weight: 600;
-    color: #000;
-}
-
-.consultas-ver-todas {
-    font-size: 14px;
-    color: #1D4ED8;
-    text-decoration: none;
-}
-
-.consultas-ver-todas:hover {
-    text-decoration: underline;
-}
-
-.consulta-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-.consulta-infos {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.consulta-nome {
-    font-size: 15px;
-    font-weight: 600;
-    color: #000;
-}
-
-.consulta-especialidade {
-    font-size: 13px;
-    color: #8b8b8b;
-}
-
-.consulta-data {
-    font-size: 13px;
-    color: #8b8b8b;
-}
-
-.badge {
-    font-size: 13px;
     font-weight: 500;
-    padding: 4px 12px;
+    color: #0f172a;
+}
+
+.agendamento input {
+    border: 1px solid #e2e8f0;
     border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    outline: none;
+    width: 220px;
+    transition: border 0.2s;
 }
 
-.confirmado {
-    background-color: #d1fae5;
-    color: #065f46;
+.agendamento input:focus {
+    border-color: #1D4ED8;
 }
 
-.pendente {
-    background-color: #fef9c3;
-    color: #854d0e;
+.top2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr 1.2fr;
+    padding: 10px 12px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 4px;
 }
 
-.historico {
-    display: flex;
-    gap: 35px;
+.top2 span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
 }
+
+
