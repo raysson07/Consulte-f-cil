@@ -4,14 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Agendamento</title>
+    <title>Agendamento de Exame</title>
     <link rel="stylesheet" href="./style/agendamentoexame.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,58 +23,43 @@
             <h2>Agendamento online</h2>
         </div>
 
-        <form id="formAgendamento">
+        <form id="formAgendamentoExame">
             <div class="nome">
-                <label for="nome">
-                    Nome completo
-                </label>
+                <label for="nome">Nome completo</label>
                 <input type="text" id="nome" placeholder="Nome completo">
             </div>
 
             <div class="data-nascimento">
-                <label for="data_nascimento">
-                    Data de nascimento
-                </label>
+                <label for="data_nascimento">Data de nascimento</label>
                 <input type="date" id="data_nascimento">
             </div>
-            <br>
+
             <div class="exame-medico">
-                <label for="exame">
-                    Área médica
-                </label>
+                <label for="tipoexame">Tipo de exame</label>
                 <select id="tipoexame">
-                    <option>Especialidade</option>
-                    <option>Cardiologia</option>
-                    <option>Dermatologia</option>
-                    <option>Neurologia</option>
+                    <option value="">Selecione o exame</option>
+                    <option value="Hemograma">Hemograma</option>
+                    <option value="Raio-X">Raio-X</option>
+                    <option value="Ultrassom">Ultrassom</option>
+                    <option value="Eletrocardiograma">Eletrocardiograma</option>
+                    <option value="Tomografia">Tomografia</option>
+                    <option value="Ressonância Magnética">Ressonância Magnética</option>
                 </select>
             </div>
 
             <div class="data">
-                <label for="data_exame">
-                    Data
-                </label>
-                <select id="data_exame">
-                    <option>Data consulta</option>
-                </select>
+                <label for="data_exame">Data</label>
+                <input type="date" id="data_exame">
             </div>
 
             <div class="horario">
-                <label for="horario">
-                    Horário
-                </label>
-                <select id="horario">
-                    <option>Horário</option>
-                </select>
+                <label for="horario">Horário</label>
+                <input type="time" id="horario">
             </div>
 
             <div class="local">
-                <label for="local">
-                    Local
-                </label>
-                <select id="local">
-                    <option>Selecione o local</option>
-                </select>
+                <label for="local">Local</label>
+                <input type="text" id="local" placeholder="Digite o local">
             </div>
 
             <div class="motivo">
@@ -88,11 +70,10 @@
             <button type="submit" class="btn btn-primary btn-agendar">
                 Confirmar Agendamento
             </button>
-    </div>
-    </form>
+        </form>
     </div>
 
-    <script src="js/agendamento.js"></script>
+    <script src="js/agendamentoexame.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,17 @@ router.post('/criar', autenticar, (req, res) => {
   const { nome, data_nascimento, especialidade, data_consulta, horario, local, motivo } = req.body;
   const usuario_id = req.usuario.id;
 
+  // Validações
+  if (!nome || !data_nascimento || !especialidade || !data_consulta || !horario || !local || !motivo)
+    return res.status(400).json({ erro: 'Preencha todos os campos' });
+
+  if (especialidade === 'Especialidade' || especialidade === '')
+    return res.status(400).json({ erro: 'Selecione uma especialidade' });
+
+  const hoje = new Date().toISOString().split('T')[0];
+  if (data_consulta < hoje)
+    return res.status(400).json({ erro: 'Data da consulta não pode ser no passado' });
+
   conexao.query(
     'INSERT INTO agendamentos (usuario_id, nome, data_nascimento, especialidade, data_consulta, horario, local, motivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
     [usuario_id, nome, data_nascimento, especialidade, data_consulta, horario, local, motivo],
