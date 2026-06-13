@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Agendamento</title>
     <link rel="stylesheet" href="./style/agendamento.css">
 </head>
@@ -23,62 +22,42 @@
 
         <form id="formAgendamento">
             <div class="nome">
-                <label for="nome">
-                    Nome completo
-                </label>
+                <label for="nome">Nome completo</label>
                 <input type="text" id="nome" placeholder="Nome completo">
             </div>
 
             <div class="data-nascimento">
-                <label for="data_nascimento">
-                    Data de nascimento
-                </label>
+                <label for="data_nascimento">Data de nascimento</label>
                 <input type="date" id="data_nascimento">
             </div>
 
             <div class="area-medica">
-                <label for="especialidade">
-                    Área médica
-                </label>
+                <label for="especialidade">Área médica</label>
                 <select id="especialidade">
-                    <option>Especialidade</option>
-                    <option>Cardiologia</option>
-                    <option>Dermatologia</option>
-                    <option>Neurologia</option>
+                    <option value="">Especialidade</option>
+                    <option value="Cardiologia">Cardiologia</option>
+                    <option value="Dermatologia">Dermatologia</option>
+                    <option value="Neurologia">Neurologia</option>
                 </select>
             </div>
 
             <div class="data">
-                <label for="data_consulta">
-                    Data
-                </label>
-                <select id="data_consulta">
-                    <option>Data consulta</option>
-                </select>
+                <label for="data_consulta">Data</label>
+                <input type="date" id="data_consulta">
             </div>
 
             <div class="horario">
-                <label for="horario">
-                    Horário
-                </label>
-                <select id="horario">
-                    <option>Horário</option>
-                </select>
+                <label for="horario">Horário</label>
+                <input type="time" id="horario">
             </div>
 
             <div class="local">
-                <label for="local">
-                    Local
-                </label>
-                <select id="local">
-                    <option>Selecione o local</option>
-                </select>
+                <label for="local">Local</label>
+                <input type="text" id="local" placeholder="Digite o local">
             </div>
 
             <div class="motivo">
-                <label for="motivo">
-                    Motivo da consulta
-                </label>
+                <label for="motivo">Motivo da consulta</label>
                 <textarea id="motivo" placeholder="Ex: Dor de cabeça"></textarea>
             </div>
 
