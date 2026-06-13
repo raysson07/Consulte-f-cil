@@ -1,4 +1,4 @@
-const form = document.getElementById("formAgendamentoExame");
+const form = document.getElementById("formAgendamento");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
